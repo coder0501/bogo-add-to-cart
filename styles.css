@@ -1,0 +1,475 @@
+@font-face {
+  font-family: "InterTight-Black";
+  src: url("./assets/webfonts/InterTight-Black.eot");
+  src: url("./assets/webfonts/InterTight-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/webfonts/InterTight-Black.woff") format("woff"),
+    url("./assets/webfonts/InterTight-Black.ttf") format("truetype"),
+    url("./assets/webfonts/InterTight-Black.svg#InterTight-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-Light";
+  src: url("./assets/webfonts/InterTight-Light.eot");
+  src: url("./assets/webfonts/InterTight-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/webfonts/InterTight-Light.woff") format("woff"),
+    url("./assets/webfonts/InterTight-Light.ttf") format("truetype"),
+    url("./assets/webfonts/InterTight-Light.svg#InterTight-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-Bold";
+  src: url("./assets/webfonts/InterTight-Bold.eot");
+  src: url("./assets/webfonts/InterTight-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/webfonts/InterTight-Bold.woff") format("woff"),
+    url("./assets/webfonts/InterTight-Bold.ttf") format("truetype"),
+    url("./assets/webfonts/InterTight-Bold.svg#InterTight-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-Medium";
+  src: url("./assets/webfonts/nterTight-Medium.eot");
+  src: url("./assets/webfonts/InterTight-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/webfonts/InterTight-Medium.woff") format("woff"),
+    url("./assets/webfonts/InterTight-Medium.ttf") format("truetype"),
+    url("./assets/webfonts/InterTight-Medium.svg#InterTight-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-Thin";
+  src: url("./assets/webfonts/InterTight-Thin.eot");
+  src: url("./assets/webfonts/InterTight-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/webfonts/InterTight-Thin.woff") format("woff"),
+    url("./assets/webfonts/InterTight-Thin.ttf") format("truetype"),
+    url("./assets/webfonts/InterTight-Thin.svg#InterTight-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 30px 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+}
+
+.center-line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Adjust the height to fit your design */
+  padding: 30px 0px;
+  font-family: "Inter-Regular";
+  font-weight: 600;
+}
+
+.center-line-container::before,
+.center-line-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  border: 0.9px solid rgba(200, 200, 200, 1);
+}
+
+.center-line-container::after {
+  right: 0%;
+  background: linear-gradient(
+    to right,
+    rgba(26, 26, 26, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.center-line-container::before {
+  left: 0%;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-family: "InterTight-Medium";
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(255, 107, 130, 1);
+  /* margin-bottom: 20px; */
+}
+
+.box {
+  border: 0.9px solid rgba(200, 200, 200, 1);
+  padding: 15px;
+  margin: 30px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.box:hover {
+  border: 2px solid rgba(255, 107, 130, 1);
+  background-color: rgba(255, 107, 130, 0.05);
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.box-header label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.box-content {
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.label-text {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "InterTight-Medium";
+}
+
+.std-price {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.box-header-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+input[type="radio"] {
+  accent-color: rgba(255, 107, 130, 1);
+  border: 1px solid rgba(255, 107, 130, 1);
+  outline: 1px solid rgba(255, 107, 130, 1);
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 107, 130, 1);
+}
+
+.discount {
+  background-color: rgba(255, 107, 130, 1);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  margin-left: 5px;
+  border-radius: 3px;
+  font-family: "InterTight-Light";
+  font-weight: 400;
+}
+
+.usd-prices {
+  font-family: "InterTight-Light";
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.price {
+  float: right;
+  font-weight: bold;
+  font-size: 14.46px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.actual-price {
+  font-size: 10px;
+  text-decoration: line-through;
+  font-weight: 400;
+  font-family: "InterTight-Medium";
+  color: lightgrey;
+}
+
+/* Trapezoid shape */
+.trapezoid {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  /* z-index: auto; */
+  width: 135px;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid rgba(215, 68, 91, 1);
+}
+
+.most-popular {
+  font-family: "InterTight-Medium";
+  font-weight: 700;
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  background-color: rgba(255, 107, 130, 1);
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.options {
+  display: none;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.box.expanded .options {
+  display: block;
+}
+
+.option {
+  margin-bottom: 10px;
+}
+
+.option label {
+  font-size: 10px;
+}
+
+.size-color-labels {
+  display: flex;
+  gap: 80px;
+  font-size: 12px;
+  margin-left: 18px;
+  margin-bottom: 8px;
+}
+
+select {
+  padding: 5px;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style for the select element */
+select {
+  appearance: none; /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100px;
+  color: black;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+
+  /* Add custom arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><polygon points='0,0 20,0 10,10'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+/* Optional: Hover and focus effects */
+select:hover {
+  border-color: #666;
+}
+
+select:focus {
+  border-color: #ff6b82;
+  outline: none;
+}
+
+.total {
+  text-align: right;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.total-free-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.free-delivery {
+  color: rgba(255, 107, 130, 1);
+  font-family: "InterTight-Medium";
+  font-weight: 500;
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 107, 130, 1);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #e91e63;
+}
+
+.powered-by-pumper {
+  margin-top: 5px;
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+  font-family: "InterTight-Medium";
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design for below 767px */
+@media (max-width: 767px) {
+  .container {
+    max-width: 450px;
+    padding: 30px 40px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  .box-content {
+    margin-left: 0px;
+  }
+
+  .box-header-content {
+    align-items: center;
+    gap: 5px;
+  }
+
+  .box-header label {
+    justify-content: center;
+  }
+
+  .label-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+  }
+
+  .std-price {
+    font-size: 16px;
+  }
+
+  .discount {
+    font-size: 20px;
+  }
+
+  .usd-prices {
+    text-align: center;
+  }
+
+  .actual-price {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 18.46px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .size-color-labels {
+    gap: 23px;
+    font-size: 22px;
+  }
+
+  .option select,
+  .option label {
+    width: 40%;
+    font-size: 20px;
+  }
+
+  .total-free-delivery {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .free-delivery {
+    font-size: 24px;
+  }
+
+  .total {
+    font-size: 20px;
+  }
+
+  .add-to-cart {
+    font-size: 1.5rem;
+  }
+  .powered-by-pumper {
+    font-size: 24px;
+  }
+}
