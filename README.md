@@ -28,12 +28,12 @@ BOGO-AddToCart/
 
 
 ## How to Run the Project
-# Clone the Repository:
+### Clone the Repository:
 
 git clone https://github.com/coder0501/bogo-add-to-cart.git
 Open the Project: Open index.html in any modern browser (Google Chrome, Firefox, Edge, etc.).
 
-# View the Functionality:
+### View the Functionality:
 
 Select the desired BOGO offer (1 Unit, 2 Units, or 3 Units).
 Customize product size and color using dropdown options.
