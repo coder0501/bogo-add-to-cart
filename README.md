@@ -1,21 +1,22 @@
 ## Bogo Add To Cart
 This project implements a Buy One Get One (BOGO) add-to-cart functionality with selectable options like size and color, dynamic pricing, and a responsive design.
 
-Features
+## Features
 BOGO Offers: Select between multiple offers like 1 Unit (10% off), 2 Units (20% off), or 3 Units (30% off).
 Customizable Options: Users can select size and color for each product unit.
 Dynamic Pricing: The total price updates based on the selected offer.
 Responsive Design: Fully responsive for screens below 767px using media queries.
 Free Delivery Indicator: Free delivery is shown for applicable orders.
 Add to Cart Button: Styled button for adding the selected products to the cart.
-Technologies Used
+
+## Technologies Used
 HTML: Structuring the layout and content.
 CSS: Styling the layout and ensuring responsiveness.
 JavaScript: (Optional) For dynamic functionality like price calculation.
 
 
 
-Project Structure
+## Project Structure
 
 BOGO-AddToCart/
 │
@@ -26,13 +27,13 @@ BOGO-AddToCart/
 
 
 
-How to Run the Project
-Clone the Repository:
+## How to Run the Project
+# Clone the Repository:
 
 git clone https://github.com/coder0501/bogo-add-to-cart.git
 Open the Project: Open index.html in any modern browser (Google Chrome, Firefox, Edge, etc.).
 
-View the Functionality:
+# View the Functionality:
 
 Select the desired BOGO offer (1 Unit, 2 Units, or 3 Units).
 Customize product size and color using dropdown options.
